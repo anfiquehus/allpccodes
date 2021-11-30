@@ -1,0 +1,48 @@
+
+    <h2>{{ab}}</h2>
+    <h2>{{msg}}</h2>
+
+
+ {{!-- diplay like loops --}}
+    {{#each value}}
+
+    <h2>{{@index}}.{{this}}</h2>
+
+    {{/each}}
+
+    <br>
+    <br>
+
+    {{!-- more objects  --}}
+
+    <h3>{{person.Name}}</h3>
+    <h5>{{person.comments.comment}}</h5>
+    <h6>{{person.comments.date}}</h6>
+
+     <br>
+     {{#if admin}}
+
+     <h2>This is admin</h2>
+
+     {{else}}
+
+     <h2>This not admin</h2>
+
+     {{/if}}
+
+     <br>
+     {{#if v1}}
+     <h2>++nu</h2>
+     {{else}}
+     <h2>---nu</h2>
+     {{/if}}
+
+
+{{!-- with argumment --}}
+     {{#with person}}
+     <h1>{{Name}}</h1>
+     {{#with comments}}
+     <h2>{{comment}}</h2>
+     <h2>{{date}}</h2>
+     {{/with}}
+     {{/with}}     
